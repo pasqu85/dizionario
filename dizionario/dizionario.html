@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizionario amico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Dizionario amico</h1>
+
+        <div class="parteNav">
+            <form class="search" onsubmit="submitForm(event)">
+                <input type="text" id="ricerca" placeholder="cerca.." class="padding5px" />
+                <input id="x" type="reset" name="X" value="X">
+                <!-- <input type="submit" name="invia" id="invia" class="padding5px"> -->
+                <p style="display:none;" id="paroleTrovate">0</p>
+            </form>
+            <button id="myBtn" class="btn padding5px">Aggiungi</button>
+        </div>
+    </header>
+    <hr>
+
+    <div id="container">
+
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+
+        <!--contenuto Modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" class="modal-form" id="form">
+                <input type="text" placeholder="Aggiungi parola" id="nuovaParola">
+                <textarea rows="4" name="descrizione" form="from" id="descrizione"
+                    placeholder="Descrizione...."></textarea>
+                <input type="submit" name="invia" id="add" class="padding5px">
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
